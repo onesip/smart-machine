@@ -4,7 +4,16 @@ import { motion, AnimatePresence } from 'motion/react';
 import { GoogleGenAI } from '@google/genai';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+// Initialize lazily to prevent crashing the entire app if the key is missing
+let ai: GoogleGenAI | null = null;
+try {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (apiKey) {
+    ai = new GoogleGenAI({ apiKey });
+  }
+} catch (e) {
+  console.error('Failed to initialize Gemini API:', e);
+}
 
 export default function AIChatbot() {
   const { t, language } = useLanguage();
@@ -29,6 +38,14 @@ export default function AIChatbot() {
     setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
     setInput('');
     setIsLoading(true);
+
+    if (!ai) {
+      setTimeout(() => {
+        setMessages(prev => [...prev, { role: 'model', text: language === 'zh' ? '抱歉，系统未配置 API 密钥，聊天功能暂时不可用。请在 Vercel 环境变量中配置 GEMINI_API_KEY。' : 'Sorry, the API key is not configured. Chat is temporarily unavailable. Please configure GEMINI_API_KEY in Vercel environment variables.' }]);
+        setIsLoading(false);
+      }, 1000);
+      return;
+    }
 
     try {
       const response = await ai.models.generateContent({
