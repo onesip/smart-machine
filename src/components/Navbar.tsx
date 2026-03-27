@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: t('nav.home'), href: '#', path: '/' },
+    { name: t('nav.home'), href: 'https://itea-supply-bv.odoo.com/', path: 'https://itea-supply-bv.odoo.com/', external: true },
     { name: t('nav.features'), href: '#features', path: '/#features' },
     { name: t('nav.mes'), href: '#mes', path: '/#mes' },
     { name: t('nav.platform'), href: '#platform', path: '/#platform' },
@@ -34,9 +34,9 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !isHome ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className={`flex items-center gap-2 font-bold text-xl ${isScrolled || !isHome ? 'text-black' : 'text-white'}`}>
+        <a href="https://itea-supply-bv.odoo.com/" className={`flex items-center gap-2 font-bold text-xl ${isScrolled || !isHome ? 'text-black' : 'text-white'}`}>
           <span>I'TEA SUPPLY</span>
-        </Link>
+        </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
