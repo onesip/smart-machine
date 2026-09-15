@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#eadfd6] bg-[#fffdfb]/95 py-3.5 shadow-[0_8px_30px_-26px_rgba(57,26,16,0.32)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-6 lg:px-8">
         <a href="https://itea-supply-bv.odoo.com/" className="flex min-w-0 items-center gap-3" aria-label="I'TEA Supply home">
-          <img src="/itea-logo-final.webp" alt="I'TEA" className="h-9 w-auto shrink-0 object-contain sm:h-10" />
+          <img src="/itea-logo.svg?v=4" alt="I'TEA" className="h-9 w-auto shrink-0 object-contain sm:h-10" />
           <span className="hidden h-7 w-px bg-[#e5d7cf] sm:block" />
           <span className="hidden text-[11px] font-semibold uppercase tracking-[0.16em] text-[#7a645a] sm:block">Smart Machine</span>
         </a>
