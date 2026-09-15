@@ -1,1 +1,259 @@
 @import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --site-ink: #0b1220;
+  --site-muted: #5f6b7a;
+  --site-line: #e5e9ef;
+  --site-soft: #f6f8fb;
+  --site-blue: #2563eb;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--site-ink); }
+img { max-width: 100%; }
+
+/* Commercial layout rhythm */
+main > section { scroll-margin-top: 88px; }
+#features,
+#mes,
+#platform,
+#models,
+#contact { position: relative; }
+
+#features > div,
+#mes > div,
+#platform > div,
+#models > div,
+#contact > div { max-width: 1200px !important; }
+
+/* Tighter, more editorial headings */
+#features h2,
+#mes h2,
+#platform h2,
+#models h2,
+#contact h2 {
+  max-width: 760px;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+#features p,
+#mes p,
+#platform p,
+#models p,
+#contact p { text-wrap: pretty; }
+
+/* Hero: one clear visual hierarchy instead of mixed image sizes */
+main > section:first-child > div.relative.mx-auto.grid {
+  min-height: 700px !important;
+  max-width: 1200px !important;
+  gap: 64px !important;
+}
+
+main > section:first-child button.group.relative.block.w-full {
+  border-radius: 20px !important;
+  background: #fff !important;
+  box-shadow: 0 28px 80px -34px rgba(0,0,0,.62) !important;
+}
+
+main > section:first-child button.group.relative.block.w-full > div:first-child {
+  aspect-ratio: 16 / 10 !important;
+  background: #f8fafc !important;
+}
+
+main > section:first-child button.group.relative.block.w-full img {
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+main > section:first-child .mt-3.grid.grid-cols-3 {
+  gap: 10px !important;
+}
+
+main > section:first-child .mt-3.grid.grid-cols-3 button {
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+main > section:first-child .mt-3.grid.grid-cols-3 button > div {
+  aspect-ratio: 16 / 10 !important;
+  background: #f8fafc !important;
+}
+
+main > section:first-child .mt-3.grid.grid-cols-3 img {
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Core feature cards: two-column editorial grid, equal media and equal card height */
+#features { padding-top: 92px !important; padding-bottom: 96px !important; }
+#features > div > .mt-12.grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+#features > div > .mt-12.grid > article {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100% !important;
+  border-radius: 16px !important;
+  border-color: var(--site-line) !important;
+  background: #fff !important;
+  box-shadow: 0 12px 34px -28px rgba(15,23,42,.42) !important;
+}
+
+#features > div > .mt-12.grid > article > button {
+  padding: 14px !important;
+  background: #f8fafc !important;
+  border-bottom: 1px solid var(--site-line) !important;
+}
+
+#features > div > .mt-12.grid > article > button > div {
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#features > div > .mt-12.grid > article img {
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
+#features > div > .mt-12.grid > article > div:last-child {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  padding: 26px !important;
+}
+
+#features article h3 { font-size: 19px !important; line-height: 1.25 !important; }
+#features article p { font-size: 13.5px !important; line-height: 1.75 !important; }
+#features article span.rounded-full {
+  max-width: 64%;
+  text-align: right;
+  white-space: normal !important;
+  line-height: 1.35 !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+/* Workflow: restrained business-system presentation */
+#mes { padding-top: 92px !important; padding-bottom: 92px !important; }
+#mes > div > .grid { gap: 64px !important; }
+#mes .grid.overflow-hidden.rounded-2xl {
+  border-radius: 14px !important;
+  box-shadow: 0 18px 48px -38px rgba(15,23,42,.4);
+}
+#mes .grid.overflow-hidden.rounded-2xl > div { min-height: 184px; }
+
+/* Owner-value dark band: improve scanability */
+main > section.bg-\[\#0b1220\] .mt-10.grid > article {
+  min-height: 210px;
+}
+main > section.bg-\[\#0b1220\] .mt-10.grid > article p {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+}
+
+/* Platform screenshots: same frame, no aggressive cropping, consistent text panel */
+#platform { padding-top: 96px !important; padding-bottom: 96px !important; }
+#platform .mt-12.space-y-6 { display: grid !important; gap: 28px !important; }
+#platform .mt-12.space-y-6 > div {
+  min-height: 430px;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 18px 48px -38px rgba(15,23,42,.42);
+}
+
+#platform .mt-12.space-y-6 > div > button {
+  min-height: 0 !important;
+  aspect-ratio: 16 / 10 !important;
+  padding: 18px !important;
+  background: #f7f9fc !important;
+}
+
+#platform .mt-12.space-y-6 > div > button img {
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  border-radius: 8px;
+}
+
+#platform .mt-12.space-y-6 > div > div {
+  min-height: 100%;
+  padding: 44px !important;
+}
+
+#platform .mt-12.space-y-6 h3 { font-size: 27px !important; line-height: 1.18 !important; }
+#platform .mt-12.space-y-6 p { font-size: 14px !important; line-height: 1.8 !important; }
+
+/* Model catalogue: machine images get identical visual boxes and card heights */
+#models { padding-top: 96px !important; padding-bottom: 96px !important; }
+#models > div > .grid.grid-cols-1.md\:grid-cols-2 {
+  gap: 22px !important;
+}
+#models > div > .grid.grid-cols-1.md\:grid-cols-2 > div {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  border-radius: 16px !important;
+  border-color: var(--site-line) !important;
+  box-shadow: 0 10px 30px -28px rgba(15,23,42,.45) !important;
+}
+#models .aspect-\[4\/3\] {
+  aspect-ratio: 16 / 10 !important;
+  padding: 14px !important;
+  background: #f8fafc !important;
+  border-bottom: 1px solid var(--site-line);
+}
+#models .aspect-\[4\/3\] img {
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+#models .aspect-\[4\/3\] + div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+#models .aspect-\[4\/3\] + div > div:last-child { margin-top: auto !important; }
+
+/* Contact: compact commercial close rather than oversized cards */
+#contact { padding-top: 88px !important; padding-bottom: 88px !important; }
+#contact .grid.grid-cols-1.md\:grid-cols-3 { max-width: 980px !important; gap: 18px !important; }
+#contact .grid.grid-cols-1.md\:grid-cols-3 > div {
+  padding: 28px !important;
+  border-radius: 14px !important;
+}
+#contact .grid.grid-cols-1.md\:grid-cols-3 > div > div:first-child {
+  width: 48px !important;
+  height: 48px !important;
+  margin-bottom: 18px !important;
+}
+#contact .grid.grid-cols-1.md\:grid-cols-3 h3 { font-size: 16px !important; }
+#contact .grid.grid-cols-1.md\:grid-cols-3 p { font-size: 15px !important; }
+
+@media (max-width: 1023px) {
+  main > section:first-child > div.relative.mx-auto.grid { gap: 42px !important; }
+  #platform .mt-12.space-y-6 > div { min-height: auto; }
+  #platform .mt-12.space-y-6 > div > div { padding: 30px !important; }
+}
+
+@media (max-width: 767px) {
+  #features > div > .mt-12.grid { grid-template-columns: 1fr !important; }
+  #features,
+  #mes,
+  #platform,
+  #models,
+  #contact { padding-top: 68px !important; padding-bottom: 68px !important; }
+  main > section:first-child > div.relative.mx-auto.grid { min-height: auto !important; gap: 36px !important; }
+  #features > div > .mt-12.grid > article > div:last-child { padding: 22px !important; }
+  #platform .mt-12.space-y-6 > div > button { padding: 10px !important; }
+  #platform .mt-12.space-y-6 > div > div { padding: 24px !important; }
+  #platform .mt-12.space-y-6 h3 { font-size: 22px !important; }
+}
