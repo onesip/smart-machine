@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --itea-brown-950: #241009;
+  --itea-brown-900: #391a10;
+  --itea-brown-800: #4b2417;
+  --itea-brown-700: #653420;
+  --itea-brown-600: #7a3d27;
+  --itea-brown-500: #9a6249;
+  --itea-cream-50: #fffdfb;
+  --itea-cream-100: #fbf7f4;
+  --itea-cream-200: #f8f3ef;
+  --itea-cream-300: #f1e7e0;
+  --itea-line: #ddcfc6;
+  --itea-muted: #766259;
+}
+
+html,
+body,
+#root {
+  background: var(--itea-cream-50) !important;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  color: #392820 !important;
+}
+
+/* Global brand replacements for the former blue system */
+.text-blue-600,
+.text-blue-500,
+.text-blue-400,
+.text-blue-300 { color: var(--itea-brown-600) !important; }
+
+.bg-blue-600 { background-color: var(--itea-brown-900) !important; }
+.bg-blue-500 { background-color: var(--itea-brown-700) !important; }
+.bg-blue-100 { background-color: #f1e2d8 !important; }
+.bg-blue-50 { background-color: #fbf2ec !important; }
+.border-blue-100 { border-color: #ead8cc !important; }
+.border-blue-200 { border-color: #dfc8ba !important; }
+.hover\:bg-blue-500:hover { background-color: var(--itea-brown-700) !important; }
+.hover\:text-blue-500:hover,
+.hover\:text-blue-600:hover,
+.hover\:text-blue-700:hover { color: var(--itea-brown-900) !important; }
+.hover\:border-blue-500:hover { border-color: var(--itea-brown-600) !important; }
+
+/* Warm the neutral system so Smart Machine clearly belongs to ITEA Supply */
+.bg-slate-50 { background-color: var(--itea-cream-100) !important; }
+.bg-slate-100 { background-color: var(--itea-cream-200) !important; }
+.border-slate-100 { border-color: #eee3dc !important; }
+.border-slate-200 { border-color: var(--itea-line) !important; }
+.text-slate-950,
+.text-slate-900 { color: var(--itea-brown-900) !important; }
+.text-slate-700,
+.text-slate-600 { color: #6f5a50 !important; }
+.text-slate-500,
+.text-slate-400 { color: #9a8175 !important; }
+
+/* Hero */
+main > section:first-child {
+  background: var(--itea-brown-950) !important;
+  border-bottom: 1px solid #4a2a1e;
+}
+
+main > section:first-child > div:first-child {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(169, 112, 83, .22), transparent 27%),
+    radial-gradient(circle at 18% 88%, rgba(116, 65, 42, .22), transparent 31%) !important;
+}
+
+main > section:first-child h1,
+main > section:first-child p,
+main > section:first-child a,
+main > section:first-child div { border-color: rgba(255,255,255,.12); }
+
+main > section:first-child .text-blue-300,
+main > section:first-child .text-blue-400 { color: #dfb8a1 !important; }
+
+main > section:first-child .bg-blue-600 { background: #8a4b31 !important; }
+main > section:first-child .bg-blue-600:hover { background: #a25c3e !important; }
+
+main > section:first-child button.group.relative.block.w-full,
+main > section:first-child .mt-3.grid.grid-cols-3 button {
+  border-color: rgba(255,255,255,.16) !important;
+  background: #fffaf7 !important;
+}
+
+main > section:first-child button.group.relative.block.w-full > div:first-child,
+main > section:first-child .mt-3.grid.grid-cols-3 button > div {
+  background: #f8f1ec !important;
+}
+
+/* Main commercial sections */
+#features,
+#platform {
+  background: var(--itea-cream-50) !important;
+}
+
+#mes,
+#models {
+  background: var(--itea-cream-200) !important;
+}
+
+#features > div > .mt-12.grid > article,
+#platform .mt-12.space-y-6 > div,
+#models > div > .grid.grid-cols-1.md\:grid-cols-2 > div {
+  border-color: var(--itea-line) !important;
+  background: #fff !important;
+  box-shadow: 0 16px 44px -36px rgba(57, 26, 16, .34) !important;
+}
+
+#features > div > .mt-12.grid > article > button,
+#platform .mt-12.space-y-6 > div > button,
+#models .aspect-\[4\/3\] {
+  background: #faf6f2 !important;
+  border-color: #eadfd6 !important;
+}
+
+#features article span.rounded-full {
+  background: var(--itea-brown-900) !important;
+  color: #fff8f4 !important;
+}
+
+#features article .bg-blue-50,
+#mes .bg-slate-950,
+#platform .bg-blue-600 {
+  background: #f5ebe5 !important;
+  color: var(--itea-brown-700) !important;
+}
+
+/* Workflow */
+#mes .grid.overflow-hidden.rounded-2xl {
+  border-color: var(--itea-line) !important;
+  background: #fff !important;
+}
+
+#mes .grid.overflow-hidden.rounded-2xl > div {
+  border-color: #eadfd6 !important;
+}
+
+#mes .grid.overflow-hidden.rounded-2xl .bg-slate-950 {
+  background: var(--itea-brown-900) !important;
+  color: white !important;
+}
+
+/* Owner-value dark band */
+main > section.bg-\[\#0b1220\] {
+  background: var(--itea-brown-900) !important;
+}
+
+main > section.bg-\[\#0b1220\] .bg-\[\#0b1220\] {
+  background: var(--itea-brown-900) !important;
+}
+
+main > section.bg-\[\#0b1220\] .text-blue-300 { color: #e4bca5 !important; }
+main > section.bg-\[\#0b1220\] .text-slate-400 { color: #cfbbb0 !important; }
+
+/* Connected operations / dashboard */
+#platform .mt-12.space-y-6 > div:nth-child(even) {
+  background: #fdf9f6 !important;
+}
+
+#platform .mt-12.space-y-6 > div > div {
+  background: transparent !important;
+}
+
+#platform .mt-10.grid.rounded-2xl,
+#platform .bg-slate-950 {
+  background: var(--itea-brown-900) !important;
+}
+
+#platform .bg-white\/5 { background: rgba(255,255,255,.055) !important; }
+#platform .border-white\/10 { border-color: rgba(255,255,255,.12) !important; }
+
+/* Machine catalogue */
+#models > div > .bg-white.rounded-3xl {
+  border: 1px solid var(--itea-line) !important;
+  background: #fffdfb !important;
+  box-shadow: 0 14px 34px -30px rgba(57,26,16,.30) !important;
+}
+
+#models .bg-slate-50.p-4.rounded-xl {
+  background: #f8f1ed !important;
+}
+
+#models .absolute.top-4.left-4.bg-blue-600 {
+  background: var(--itea-brown-900) !important;
+}
+
+#models a.text-blue-600 {
+  color: var(--itea-brown-700) !important;
+}
+
+/* Contact closes the page in the same brand dark brown */
+#contact {
+  background: var(--itea-brown-950) !important;
+}
+
+#contact > div.absolute {
+  opacity: .16 !important;
+}
+
+#contact > div.absolute > div {
+  background: radial-gradient(circle at 50% 50%, #8f5035 0%, transparent 50%) !important;
+}
+
+#contact .bg-white\/5 {
+  background: rgba(255, 250, 247, .055) !important;
+  border-color: rgba(255,255,255,.12) !important;
+}
+
+#contact .bg-blue-500\/20,
+#contact .bg-emerald-500\/20,
+#contact .bg-purple-500\/20 {
+  background: rgba(202, 143, 110, .16) !important;
+}
+
+#contact .text-blue-400,
+#contact .text-emerald-400,
+#contact .text-purple-400 {
+  color: #ddb398 !important;
+}
+
+/* Buttons and links inherit one commercial language */
+a,
+button { -webkit-tap-highlight-color: transparent; }
+
+.rounded-full.bg-blue-600,
+.rounded-lg.bg-blue-600,
+button.bg-blue-600,
+a.bg-blue-600 {
+  background: var(--itea-brown-900) !important;
+}
+
+/* Keep image presentation neutral and product-focused */
+#features img,
+#platform img,
+#models img {
+  background: transparent !important;
+}
+
+@media (max-width: 767px) {
+  main > section:first-child { padding-top: 88px !important; }
+  body { background: var(--itea-cream-50) !important; }
+}
