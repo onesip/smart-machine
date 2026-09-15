@@ -26,7 +26,6 @@ body {
   color: #392820 !important;
 }
 
-/* Global brand replacements for the former blue system */
 .text-blue-600,
 .text-blue-500,
 .text-blue-400,
@@ -44,7 +43,6 @@ body {
 .hover\:text-blue-700:hover { color: var(--itea-brown-900) !important; }
 .hover\:border-blue-500:hover { border-color: var(--itea-brown-600) !important; }
 
-/* Warm the neutral system so Smart Machine clearly belongs to ITEA Supply */
 .bg-slate-50 { background-color: var(--itea-cream-100) !important; }
 .bg-slate-100 { background-color: var(--itea-cream-200) !important; }
 .border-slate-100 { border-color: #eee3dc !important; }
@@ -56,7 +54,6 @@ body {
 .text-slate-500,
 .text-slate-400 { color: #9a8175 !important; }
 
-/* Hero */
 main > section:first-child {
   background: var(--itea-brown-950) !important;
   border-bottom: 1px solid #4a2a1e;
@@ -90,16 +87,11 @@ main > section:first-child .mt-3.grid.grid-cols-3 button > div {
   background: #f8f1ec !important;
 }
 
-/* Main commercial sections */
 #features,
-#platform {
-  background: var(--itea-cream-50) !important;
-}
+#platform { background: var(--itea-cream-50) !important; }
 
 #mes,
-#models {
-  background: var(--itea-cream-200) !important;
-}
+#models { background: var(--itea-cream-200) !important; }
 
 #features > div > .mt-12.grid > article,
 #platform .mt-12.space-y-6 > div,
@@ -128,116 +120,67 @@ main > section:first-child .mt-3.grid.grid-cols-3 button > div {
   color: var(--itea-brown-700) !important;
 }
 
-/* Workflow */
 #mes .grid.overflow-hidden.rounded-2xl {
   border-color: var(--itea-line) !important;
   background: #fff !important;
 }
 
-#mes .grid.overflow-hidden.rounded-2xl > div {
-  border-color: #eadfd6 !important;
-}
+#mes .grid.overflow-hidden.rounded-2xl > div { border-color: #eadfd6 !important; }
 
 #mes .grid.overflow-hidden.rounded-2xl .bg-slate-950 {
   background: var(--itea-brown-900) !important;
   color: white !important;
 }
 
-/* Owner-value dark band */
-main > section.bg-\[\#0b1220\] {
-  background: var(--itea-brown-900) !important;
-}
-
-main > section.bg-\[\#0b1220\] .bg-\[\#0b1220\] {
-  background: var(--itea-brown-900) !important;
-}
-
+main > section.bg-\[\#0b1220\] { background: var(--itea-brown-900) !important; }
+main > section.bg-\[\#0b1220\] .bg-\[\#0b1220\] { background: var(--itea-brown-900) !important; }
 main > section.bg-\[\#0b1220\] .text-blue-300 { color: #e4bca5 !important; }
 main > section.bg-\[\#0b1220\] .text-slate-400 { color: #cfbbb0 !important; }
 
-/* Connected operations / dashboard */
-#platform .mt-12.space-y-6 > div:nth-child(even) {
-  background: #fdf9f6 !important;
-}
-
-#platform .mt-12.space-y-6 > div > div {
-  background: transparent !important;
-}
-
+#platform .mt-12.space-y-6 > div:nth-child(even) { background: #fdf9f6 !important; }
+#platform .mt-12.space-y-6 > div > div { background: transparent !important; }
 #platform .mt-10.grid.rounded-2xl,
-#platform .bg-slate-950 {
-  background: var(--itea-brown-900) !important;
-}
-
+#platform .bg-slate-950 { background: var(--itea-brown-900) !important; }
 #platform .bg-white\/5 { background: rgba(255,255,255,.055) !important; }
 #platform .border-white\/10 { border-color: rgba(255,255,255,.12) !important; }
 
-/* Machine catalogue */
 #models > div > .bg-white.rounded-3xl {
   border: 1px solid var(--itea-line) !important;
   background: #fffdfb !important;
   box-shadow: 0 14px 34px -30px rgba(57,26,16,.30) !important;
 }
 
-#models .bg-slate-50.p-4.rounded-xl {
-  background: #f8f1ed !important;
-}
+#models .bg-slate-50.p-4.rounded-xl { background: #f8f1ed !important; }
+#models .absolute.top-4.left-4.bg-blue-600 { background: var(--itea-brown-900) !important; }
+#models a.text-blue-600 { color: var(--itea-brown-700) !important; }
 
-#models .absolute.top-4.left-4.bg-blue-600 {
-  background: var(--itea-brown-900) !important;
-}
-
-#models a.text-blue-600 {
-  color: var(--itea-brown-700) !important;
-}
-
-/* Contact closes the page in the same brand dark brown */
-#contact {
-  background: var(--itea-brown-950) !important;
-}
-
-#contact > div.absolute {
-  opacity: .16 !important;
-}
-
+#contact { background: var(--itea-brown-950) !important; }
+#contact > div.absolute { opacity: .16 !important; }
 #contact > div.absolute > div {
   background: radial-gradient(circle at 50% 50%, #8f5035 0%, transparent 50%) !important;
 }
-
 #contact .bg-white\/5 {
   background: rgba(255, 250, 247, .055) !important;
   border-color: rgba(255,255,255,.12) !important;
 }
-
 #contact .bg-blue-500\/20,
 #contact .bg-emerald-500\/20,
-#contact .bg-purple-500\/20 {
-  background: rgba(202, 143, 110, .16) !important;
-}
-
+#contact .bg-purple-500\/20 { background: rgba(202, 143, 110, .16) !important; }
 #contact .text-blue-400,
 #contact .text-emerald-400,
-#contact .text-purple-400 {
-  color: #ddb398 !important;
-}
-
-/* Buttons and links inherit one commercial language */
-a,
-button { -webkit-tap-highlight-color: transparent; }
+#contact .text-purple-400 { color: #ddb398 !important; }
 
 .rounded-full.bg-blue-600,
 .rounded-lg.bg-blue-600,
 button.bg-blue-600,
-a.bg-blue-600 {
-  background: var(--itea-brown-900) !important;
-}
+a.bg-blue-600 { background: var(--itea-brown-900) !important; }
 
-/* Keep image presentation neutral and product-focused */
 #features img,
 #platform img,
-#models img {
-  background: transparent !important;
-}
+#models img { background: transparent !important; }
+
+a,
+button { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 767px) {
   main > section:first-child { padding-top: 88px !important; }
